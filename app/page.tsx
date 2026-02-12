@@ -1,8 +1,10 @@
+import Hello from "../components/hello";
+
 const page = () => {
   return (
-    <div>
-      <h1>Strat Builder App</h1>
-    </div>
+    <main>
+      <Hello />
+    </main>
   )
 }
 
