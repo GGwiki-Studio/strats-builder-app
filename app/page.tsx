@@ -1,11 +1,6 @@
-import Hello from "../components/hello";
+// app/page.tsx
+import { redirect } from 'next/navigation'
 
-const page = () => {
-  return (
-    <main>
-      <Hello />
-    </main>
-  )
+export default function Home() {
+  redirect('/signin')
 }
-
-export default page
