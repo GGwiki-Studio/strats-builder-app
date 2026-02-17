@@ -2,7 +2,7 @@
 'use client'
 
 import { useState } from 'react'
-import { VoteButtonsProps } from '../types'
+import { VoteButtonsProps } from '../app/types'
 
 type VoteType = -1 | 0 | 1
 

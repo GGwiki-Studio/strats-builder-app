@@ -3,7 +3,7 @@ import './globals.css'
 import { ReactNode } from 'react'
 
 export const metadata = {
-  title: 'GG-WIKI',
+  title: 'GGWIKI',
   description: 'Game strategies and tactics wiki',
 }
 
@@ -17,7 +17,7 @@ export default function RootLayout({
       <body>
         <header style={styles.header}>
           <div style={styles.container}>
-            <a href="/home" style={styles.logo}>GG-WIKI</a>
+            <a href="/home" style={styles.logo}>GGWIKI</a>
             <nav style={styles.nav}>
               <a href="/signin" style={styles.navLink}>Sign In</a>
               <a href="/submit" style={styles.button}>+ New Post</a>

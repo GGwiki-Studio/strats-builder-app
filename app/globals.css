@@ -19,3 +19,123 @@ a {
 button:hover {
   opacity: 0.8;
 }
+
+/* Container for forms */
+.form-container {
+  min-height: calc(100vh - 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card style */
+.form-card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+}
+
+/* Titles and subtitles */
+.form-title {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  color: #1a1a1b;
+}
+
+.form-subtitle {
+  margin: 0 0 24px 0;
+  color: #787c7e;
+  font-size: 14px;
+}
+
+/* Error messages */
+.form-error {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  color: #c00;
+  padding: 12px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+/* Form fields */
+.form-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #1a1a1b;
+}
+
+.form-input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+/* Button */
+.form-button {
+  background-color: #0079d3;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+/* Footer */
+.form-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 14px;
+  color: #787c7e;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.form-link {
+  color: #0079d3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Demo box */
+.form-demo {
+  margin-top: 30px;
+  padding: 16px;
+  background-color: #f6f7f8;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.form-demo-title {
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  color: #1a1a1b;
+}
+
+.form-demo-text {
+  margin: 4px 0;
+  color: #787c7e;
+}

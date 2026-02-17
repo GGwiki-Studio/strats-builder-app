@@ -1,5 +1,5 @@
 // app/home/page.tsx
-import PostList from '../components/PostList'
+import PostList from '../../components/PostList'
 import { Post } from '../types'
 import { CSSProperties } from 'react'
 

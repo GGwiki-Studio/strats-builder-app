@@ -1,6 +1,6 @@
 // app/components/PostCard.tsx
 import VoteButtons from './VoteButtons'
-import { PostCardProps } from '../types'
+import { PostCardProps } from '../app/types'
 
 export default function PostCard({ post }: PostCardProps) {
   // Helper function for difficulty colors

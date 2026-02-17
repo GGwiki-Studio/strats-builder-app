@@ -1,6 +1,6 @@
 // app/components/PostList.tsx
 import PostCard from './PostCard'
-import { PostListProps } from '../types'
+import { PostListProps } from '../app/types'
 
 export default function PostList({ posts }: PostListProps) {
   if (!posts || posts.length === 0) {

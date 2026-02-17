@@ -1,5 +1,5 @@
 // app/post/[id]/page.tsx
-import VoteButtons from '@/app/components/VoteButtons'
+import VoteButtons from '@/components/VoteButtons'
 import { Post } from '@/app/types'
 import { CSSProperties } from 'react'
 
