@@ -11,7 +11,7 @@ export default function SignupPage() {
   const [error, setError] = useState('')
   const router = useRouter()
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
     setError('')
