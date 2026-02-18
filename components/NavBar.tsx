@@ -1,35 +1,32 @@
+'use client'
+import { useSupabaseAuth } from '@/app/providers/SupaBaseAuthProvider'
 import Link from 'next/link'
-type NavBarProps = {
-  user: {
-    id: string
-    username: string
-  } | null
-}
 
-const NavBar = ({user}: NavBarProps) => {
-  return (
-    <header style={styles.header}>
-        <div style={styles.container}>
-            <a href="/home" style={styles.logo}>GGWIKI</a>
-            <nav style={styles.nav}>
-                {!user ? (
-                <a href="/signin" style={styles.navLink}>Sign In</a>
-                ) : (
-                    <>
-                    <a href="/submit" style={styles.button}>+ New Post</a>
+const NavBar = () => {
+    const { user } = useSupabaseAuth()
+    return (
+        <header style={styles.header}>
+            <div style={styles.container}>
+                <a href="/home" style={styles.logo}>GGWIKI</a>
+                <nav style={styles.nav}>
+                    {!user ? (
+                    <a href="/signin" style={styles.navLink}>Sign In</a>
+                    ) : (
+                        <>
+                        <a href="/submit" style={styles.button}>+ New Post</a>
 
-                    <Link
-                        href={`/profile/${user.username}-${user.id}`}
-                        style={styles.navLink}
-                    >
-                        Profile
-                    </Link>
-                    </>
-                )}
-            </nav>
-        </div>
-    </header>
-  )
+                        <Link
+                            href={`/profile/${user.username}-${user.id}`}
+                            style={styles.navLink}
+                        >
+                            Profile
+                        </Link>
+                        </>
+                    )}
+                </nav>
+            </div>
+        </header>
+    )
 }
 
 const styles = {

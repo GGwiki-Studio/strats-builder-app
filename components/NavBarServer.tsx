@@ -20,5 +20,5 @@ export default async function NavBarServer() {
     profile = data
   }
 
-  return <NavBar user={profile} />
+  return <NavBar />
 }

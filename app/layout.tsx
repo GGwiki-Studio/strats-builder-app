@@ -1,6 +1,7 @@
 import './globals.css'
 import { ReactNode, Suspense } from 'react'
 import NavBarServer from '@/components/NavBarServer'
+import { SupabaseAuthProvider } from './providers/SupaBaseAuthProvider'
 
 export const metadata = {
   title: 'GGWIKI',
@@ -15,12 +16,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Suspense fallback={null}>
-          <NavBarServer />
-        </Suspense>
-        <main className='main'>
-          {children}
-        </main>
+        <SupabaseAuthProvider>
+          <Suspense fallback={null}>
+            <NavBarServer />
+          </Suspense>
+          <main className='main'>
+            {children}
+          </main>
+        </SupabaseAuthProvider>
       </body>
     </html>
   )

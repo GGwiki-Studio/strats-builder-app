@@ -1,23 +1,20 @@
 'use client'
-
-import { useRouter } from "next/navigation"
+import { useSupabaseAuth } from "@/app/providers/SupaBaseAuthProvider"
 import { createClient } from "@/lib/supabase/client"
+import { useRouter } from "next/navigation"
 
 export default function LogoutButton() {
+  const { setUser } = useSupabaseAuth()
   const supabase = createClient()
   const router = useRouter()
 
   const handleLogout = async () => {
-    const { error } = await supabase.auth.signOut()
-    if (error) {
-      console.error("Logout failed:", error.message)
-    } else {
-      router.push("/signin")
-    }
+    await supabase.auth.signOut()
+    setUser(null) // updates Navbar immediately
+    router.push("/signin")
   }
 
-  return (
-    <button
+  return (<button
       onClick={handleLogout}
       style={{
         backgroundColor: "#e53935",
@@ -30,6 +27,5 @@ export default function LogoutButton() {
       }}
     >
       Logout
-    </button>
-  )
+    </button>)
 }
