@@ -1,4 +1,3 @@
-// app/components/VoteButtons.tsx
 'use client'
 
 import { useState } from 'react'

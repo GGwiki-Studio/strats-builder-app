@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
 
   const supabase = await createClient()
 
-  // 1️⃣ Create user in Supabase Auth
+  //Create user in Supabase Auth
   const { data: signUpData, error: signUpError } = await supabase.auth.signUp({
     email,
     password,
@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ message: "Failed to create user" }, { status: 500 })
   }
 
-  // 2️⃣ Insert into profiles table
+  //Insert into profiles table
   const { error: profileError } = await supabase
     .from("profiles")
     .insert({

@@ -6,7 +6,6 @@ export function GameStrategies({ params }: { params: Promise<{ slug: string }> }
   // Use the `use` hook to unwrap the Promise inside the component
   const { slug } = use(params)
   
-  // Now you can use the slug value
   return <GameStrategiesContent slug={slug} />
 }
 

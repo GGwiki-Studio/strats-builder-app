@@ -1,4 +1,3 @@
-// app/components/PostCard.tsx
 import VoteButtons from './VoteButtons'
 import { PostCardProps } from '../app/types'
 

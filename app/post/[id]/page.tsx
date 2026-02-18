@@ -71,14 +71,12 @@ const sampleComments = [
   }
 ]
 
-// FIXED: params type
+//params type
 type PageProps = {
-  params: Promise<{
-    id: string
-  }>
+  params: Promise<{id: string}>
 }
 
-// FIXED: Make sure it's a default export with async
+
 export default async function Page({ params }: PageProps) {
   const { id } = await params
   const postId = parseInt(id)

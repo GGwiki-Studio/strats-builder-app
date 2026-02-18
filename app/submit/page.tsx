@@ -1,4 +1,3 @@
-// app/submit/page.tsx
 'use client'
 
 import { useState } from 'react'
@@ -24,7 +23,6 @@ export default function SubmitPage() {
       difficulty 
     })
     
-    // Redirect home
     router.push('/home')
   }
 

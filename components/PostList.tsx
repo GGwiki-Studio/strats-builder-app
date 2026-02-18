@@ -1,4 +1,3 @@
-// app/components/PostList.tsx
 import PostCard from './PostCard'
 import { PostListProps } from '../app/types'
 
