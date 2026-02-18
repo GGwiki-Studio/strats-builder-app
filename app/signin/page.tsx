@@ -13,37 +13,37 @@ export default function SignInPage() {
   const router = useRouter()
   const supabase = createClient()
 
-  const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-  setIsLoading(true)
-  setError('')
+  const handleSubmit = async (e: React.SubmitEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsLoading(true)
+    setError('')
 
-  try {
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
+    try {
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      })
 
-    if (error) {
-      setError(error.message)
-    } else if(data.user){
-      // Successful login
-      const { data: profileData, error: profileError } = await supabase
-        .from('profiles')
-        .select('username')
-        .eq('id', data.user.id)
-        .single()
-      if (!profileError) {
-        console.log('Username:', profileData.username)
+      if (error) {
+        setError(error.message)
+      } else if(data.user){
+        // Successful login
+        const { data: profileData, error: profileError } = await supabase
+          .from('profiles')
+          .select('username')
+          .eq('id', data.user.id)
+          .single()
+        if (!profileError) {
+          console.log('Username:', profileData.username)
+        }
+        router.push('/home')
       }
-      router.push('/home')
+    } catch (err) {
+      setError('Something went wrong')
+    } finally {
+      setIsLoading(false)
     }
-  } catch (err) {
-    setError('Something went wrong')
-  } finally {
-    setIsLoading(false)
   }
-}
 
 
   return (
